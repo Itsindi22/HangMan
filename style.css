@@ -1,0 +1,37 @@
+header {
+    color:red;
+    font-size: 60px;
+text-align: center;
+
+}
+body {
+    background-color: rgb(5, 70, 155);
+}
+.square-button {
+    width: 130px; /* Set the width of the button */
+    height: 50px; /* Set the height of the button */
+    border: none;
+    background-color: #fff; /* Set the background color */
+    color: gray; /* Set the text color */
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    top:410px;
+    left: 250px;
+}
+.ender-button {
+    width: 120px; /* Set the width of the button */
+    height: 80px; /* Set the height of the button */
+    border: none;
+    background-color: #8A2BE2; /* Set the background color (Ender Purple) */
+    color: white; /* Set the text color */
+    font-size: 16px;
+    cursor: pointer;
+    border-top-right-radius: 10px; /* Adjust border-radius for the top-right corner */
+    border-bottom-right-radius: 100px;
+    position: relative;
+    top:410px;
+    left: 250px;
+    font-size: 20px;
+   
+}
