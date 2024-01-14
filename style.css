@@ -1,49 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root {
+    --background: #1a2238;
+    --title: #ff6a3d;
+    --text: #9daaf2;
+    --highlight: #f4db7d;
+}
 * {
     margin: 0;
     padding: 0;
-    font-family: cursive;
-}
-
-header {
-    color: red;
-    font-size: 60px;
-    text-align: center;
     box-sizing: border-box;
 }
 
-.flex-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100px;
+body {
+    background-color: var(--background);
+    font-family: 'Roboto', sans-serif;
 }
 
-.flex-container2 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100px;
-    position: relative;
+header {
+    color: var(--title);
+    box-sizing: border-box;
 }
 
-.flex-box {
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(Purple, red);
-    color: white;
+#page-title {
+    margin-top: 20px;
+    font-size: 70px;
+    text-align: center;
+}
+
+#alphabet-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
-    text-align: center;
-    line-height: 200px;
-    border-radius: 2px;
-    margin: 2px;
-    padding: 4px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    height: 100px;
 }
 
-body {
-    background-color: rgb(5, 70, 155);
+#response-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.alphabetBtn {
+    margin: 2px;
+    padding: 4px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background: var(--text);
+    color: white;
+    font-size: 20px;
+    border-radius: 15px;
+    border: none;
+    transition: all .5s ease;
+}
+
+.alphabetBtn:hover {
+    background-color: var(--highlight);
+    color: black;
+    transform: scale(1.2);
+    transform: all .5s ease;
+    box-shadow: rgba(255, 0, 0, 0.25) 0px 54px 55px, rgba(255, 1, 1, 0.12) 0px -12px 30px, rgba(255, 0, 0, 0.12) 0px 4px 6px, rgba(255, 0, 0, 0.17) 0px 12px 13px, rgba(255, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .square-button,

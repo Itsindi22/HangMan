@@ -1,34 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>HangMan</title>
-</head>
-<body>
-    <header>HangMan</header>
+  </head>
 
-    <div class="flex-container">
-        <div class="flex-box">A</div>
-        <div class="flex-box">B</div>
-        <div class="flex-box">C</div>
-        <div class="flex-box">D</div>
-        <div class="flex-box">E</div>
-        <div class="flex-box">F</div>
-        <div class="flex-box">G</div>
-        <div class="flex-box">H</div>
-        <div class="flex-box">I</div>
+  <body>
+    <header>
+        <h1 id="page-title">HangMan</h1>
+    </header>
 
-        <div class="flex-container2">
-            <div class="flex-box">J</div>
-        </div>
+    <!-- Contains buttons from A - Z-->
+    <div id="alphabet-container"></div>
+
+    <div id="response-container">
+        <form>
+            <input type="text" id="letter" name="letter" placeholder="Enter letter" maxlength="1" required>
+            <input type="submit" value="Enter">
+        </form>
     </div>
 
-    <div class="GeussBtn">
-        <button class="square-button">Enter a Letter</button>
-        <button class="ender-button">Enter</button>
-    </div>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
