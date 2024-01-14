@@ -63,6 +63,7 @@ header {
 	background-color: var(--highlight);
 	color: black;
     box-shadow: 0 4px 8px 0 rgba(255, 0, 0, 0.764), 0 6px 20px 0 rgba(255, 0, 0, 0.75);
+    cursor: pointer;
 	transform: scale(1.05);
 	transition: all .5s ease;
 
