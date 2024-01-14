@@ -33,7 +33,6 @@ header {
     align-items: center;
     flex-wrap: wrap;
     margin-top: 20px;
-    border: 5px solid red;
 }
 
 #response-container {
