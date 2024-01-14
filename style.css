@@ -56,6 +56,7 @@ header {
 	font-size: 100%;
 	background-color: var(--text);
 	color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.764), 0 6px 20px 0 rgba(0, 0, 0, 0.75);
 	transition: all .5s ease;
 }
 #submitBtn:hover {
@@ -72,8 +73,8 @@ header {
 }
 
 .alphabetBtn {
-    margin: 2px;
-    padding: 4px;
+    margin: 5px;
+    /* padding: 4px; */
     width: 50px;
     height: 50px;
     text-align: center;
@@ -82,6 +83,7 @@ header {
     font-size: 20px;
     border-radius: 15px;
     border: none;
+    /* box-shadow: rgba(0, 0, 0, 0.634) 0px 5px 15px; */
     transition: all .5s ease;
 }
 
