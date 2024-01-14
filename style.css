@@ -43,6 +43,35 @@ header {
     margin-top: 30px;
 }
 
+#letterInput {
+    border: none;
+	padding: 10px;
+	margin-right: 10px;
+	font-size: 100%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.764), 0 6px 20px 0 rgba(0, 0, 0, 0.75);
+}
+
+#submitBtn {
+    border: none;
+	padding: 10px;
+	font-size: 100%;
+	background-color: var(--text);
+	color: white;
+	transition: all .5s ease;
+}
+#submitBtn:hover {
+	background-color: var(--highlight);
+	color: black;
+    box-shadow: 0 4px 8px 0 rgba(255, 0, 0, 0.764), 0 6px 20px 0 rgba(255, 0, 0, 0.75);
+	transform: scale(1.05);
+	transition: all .5s ease;
+
+}
+#submitBtn:active {
+	background-color: #9a9c9c;
+	color: white;
+}
+
 .alphabetBtn {
     margin: 2px;
     padding: 4px;
@@ -63,30 +92,4 @@ header {
     transform: scale(1.2);
     transform: all .5s ease;
     box-shadow: rgba(255, 0, 0, 0.25) 0px 54px 55px, rgba(255, 1, 1, 0.12) 0px -12px 30px, rgba(255, 0, 0, 0.12) 0px 4px 6px, rgba(255, 0, 0, 0.17) 0px 12px 13px, rgba(255, 0, 0, 0.09) 0px -3px 5px;
-}
-
-.square-button,
-.ender-button {
-    width: 130px;
-    height: 50px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.ender-button {
-    width: 120px;
-    height: 80px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 100px;
-    font-size: 20px;
-}
-
-.square-button,
-.ender-button {
-    border: none;
-    background-color: #fff;
-    color: gray;
-    position: relative;
-    top: 410px;
-    left: 250px;
 }
