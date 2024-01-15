@@ -8,20 +8,25 @@
   </head>
 
   <body>
-    <header>
+    <!-- <header>
         <h1 id="page-title">HangMan</h1>
-    </header>
+    </header> -->
 
     <!-- Contains div letters from A - Z-->
-    <div id="alphabet-container"></div>
+    <div id="alphabet-container" style="display: none"></div>
 
-    <div id="response-container">
+    <div id="response-container" style="display: none">
         <form>
             <input type="text" id="letterInput" name="letterInput" placeholder="Enter letter" maxlength="1" required>
-            <input id="submitBtn" type="submit" value="Enter">
+            <input class="buttonStyle" type="submit" value="Enter">
         </form>
     </div>
 
+    <div id="start-game-container">
+        <h1 id="startTitle">HangMan</h1>
+        <button id="startButton" class="buttonStyle" onclick="startGame()">Start Game</button>
+    </div>
+    
     <script src="script.js"></script>
   </body>
 </html>
