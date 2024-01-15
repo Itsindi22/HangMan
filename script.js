@@ -135,7 +135,9 @@ function gameEnd(state) {
     Object.keys(randomWordDict).forEach((key) => {
         var data = randomWordDict[key];
         var letterDiv = data[0];
+        var wordLetter = data[1]
 
         letterDiv.style.backgroundColor = backgroundColor;
+        letterDiv.textContent = wordLetter;
     })
 }
