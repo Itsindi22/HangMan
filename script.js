@@ -35,14 +35,10 @@ function startGame() {
     // getRandomWord();
     // console.log(randomWord)
     const startGameContainer = document.getElementById('start-game-container');
-    const header = document.getElementById('header');
-    const alphabetContainer = document.getElementById('alphabet-container');
-    const responseContainer = document.getElementById('response-container');
+    const gameDisplay = document.getElementById('gameDisplay');
 
     startGameContainer.style.display = "none";
-    header.style.display = "inline";
-    alphabetContainer.style.display = "flex";
-    responseContainer.style.display = "flex";
+    gameDisplay.style.display = "inline";
  }
 
  function resetHeight(element, reduction){

@@ -8,25 +8,36 @@
   </head>
 
   <body>
-    <header id="header" style="display: none">
+    <div id="gameDisplay" style="display: none">
+      <header id="header">
         <h1 id="page-title">HangMan</h1>
-    </header>
+      </header>
 
-    <!-- Contains div letters from A - Z-->
-    <div id="alphabet-container" style="display: none"></div>
+      <!-- Contains div letters from A - Z-->
+      <div id="alphabet-container"></div>
 
-    <div id="response-container" style="display: none">
+      <div id="response-container">
         <form>
-            <input type="text" id="letterInput" name="letterInput" placeholder="Enter letter" maxlength="1" required>
-            <input class="buttonStyle" type="submit" value="Enter">
+          <input
+            type="text"
+            id="letterInput"
+            name="letterInput"
+            placeholder="Enter letter"
+            maxlength="1"
+            required
+          />
+          <input class="buttonStyle" type="submit" value="Enter" />
         </form>
+      </div>
     </div>
 
     <div id="start-game-container">
-        <h1 id="startTitle">HangMan</h1>
-        <button id="startButton" class="buttonStyle" onclick="startGame()">Start Game</button>
+      <h1 id="startTitle">HangMan</h1>
+      <button id="startButton" class="buttonStyle" onclick="startGame()">
+        Start Game
+      </button>
     </div>
-    
+
     <script src="script.js"></script>
   </body>
 </html>
