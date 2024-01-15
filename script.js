@@ -2,9 +2,9 @@ var buttonContainer = document.querySelector('#alphabet-container');
 var alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 alphabet.split('').forEach(function(letter) {
 
-    // Creates a new button element
-    var button = document.createElement('button');
-    button.className = 'alphabetBtn'
+    // Creates a new letter div element
+    var button = document.createElement('div');
+    button.className = 'alphabetLetter'
     button.textContent = letter;
 
     // Appends the button to the container
