@@ -104,9 +104,12 @@ alphabetList.forEach(function(letterButton) {
             if (letterInWord) {
                 letterButton.style.backgroundColor = "green";
             } else {
-                letterButton.style.backgroundColor = "var(--title)";
-                playerTries -= 1;
+                if (letterButton.style.backgroundColor != "var(--title)") {
+                    playerTries -= 1;
+                }
 
+                letterButton.style.backgroundColor = "var(--title)";
+                
                 if (playerTries <= 0) {
                     gameEnd("lose");
                 }
