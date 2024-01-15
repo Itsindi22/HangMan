@@ -27,13 +27,89 @@ header {
     font-size: 70px;
     text-align: center;
 }
-
+#hangman-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+#hangman {
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+}
+#head {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: red;
+}
+#body {
+    width: 10px;
+    height: 70px;
+    margin-left: 20px;
+    background-color: gray;
+}
+#left-arm {
+    width: 10px;
+    height: 70px;
+    background-color: gray;
+    margin-top: -30px;
+    margin-left: -30px;
+    rotate: 120deg;
+}
+#right-arm {
+    width: 10px;
+    height: 70px;
+    background-color: gray;
+    margin-top: -70px;
+    margin-left: 30px;
+    rotate:-120deg;
+}
+#left-leg {
+    width: 10px;
+    height: 70px;
+    background-color: gray;
+    margin-left: -8px;
+    margin-top:-18px;
+    rotate: 50deg;
+}
+#right-leg {
+    width: 10px;
+    height: 70px;
+    background-color: gray;
+    margin-left: 48px;
+    margin-top:-70px;
+    rotate: -50deg;
+}
+/* #top-base {
+    width:200px;
+    height: 10px;
+    background-color: black;
+}
+#top-vertical-line {
+    width: 10px;
+    height: 50px;
+    margin-left: 189px;
+    background-color: red;
+}
+#vertical-line {
+    width: 10px;
+    height: 300px;
+    margin-top: -60px;
+    background-color: green;
+}
+#bottom-base {
+    width:200px;
+    height: 10px;
+    margin-left: -95px;
+    background-color: orange;
+} */
 #word-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 120px;
+    margin-top: 20px;
 }
 #alphabet-container {
     display: flex;
