@@ -7,8 +7,9 @@ let randomWord = "";
 alphabet.split('').forEach(function(letter) {
 
     // Creates a new letter div element
-    var letterDiv = document.createElement('div');
+    var letterDiv = document.createElement('button');
     letterDiv.className = 'alphabetLetter';
+    letterDiv.id = "alphabetBtn";
     letterDiv.textContent = letter;
 
     // Appends the button to the container
