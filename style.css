@@ -28,6 +28,13 @@ header {
     text-align: center;
 }
 
+#word-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: wrap;
+    margin-top: 120px;
+}
 #alphabet-container {
     display: flex;
     justify-content: center;
