@@ -8,6 +8,13 @@ var randomWordDict = {};
 let randomWordLength = 0;
 let gameEndBoolean = false;
 let playerTries = 6;
+var head = document.getElementById('head');
+var body = document.getElementById('body');
+var leftArm = document.getElementById('left-arm');
+var rightArm = document.getElementById('right-arm')
+var leftLeg = document.getElementById('left-leg')
+var rightLeg = document.getElementById('right-leg')
+var hangManPieces = [head, body, leftArm, rightArm, leftLeg, rightLeg]
 
 alphabet.split('').forEach(function(letter) {
 
@@ -106,6 +113,8 @@ alphabetList.forEach(function(letterButton) {
             } else {
                 if (letterButton.style.backgroundColor != "var(--title)") {
                     playerTries -= 1;
+                    var piece = hangManPieces.shift();
+                    piece.style.display = 'block';
                 }
 
                 letterButton.style.backgroundColor = "var(--title)";
@@ -125,11 +134,13 @@ alphabetList.forEach(function(letterButton) {
 function gameEnd(state) {
     gameEndBoolean = true;
     var backgroundColor = "var(--text)";
+    var bloodDisplay = document.getElementById('blood-container');
 
     if (state === "win") {
         backgroundColor = "green";
     } else {
         backgroundColor = "var(--title)"
+        bloodDisplay.style.display = 'flex'
     }
 
     Object.keys(randomWordDict).forEach((key) => {
@@ -141,3 +152,4 @@ function gameEnd(state) {
         letterDiv.textContent = wordLetter;
     })
 }
+
