@@ -8,16 +8,15 @@
   </head>
 
   <body>
+    <!-- Content when the game has started.-->
     <div id="gameDisplay" style="display: none">
       <header id="header">
         <h1 id="page-title">HangMan</h1>
       </header>
+
+      <!-- Hangman design-->
       <div id="hangman-container">
         <div id="hangman">
-          <!-- <div id="top-base"></div>
-          <div id="top-vertical-line"></div>
-          <div id="vertical-line"></div>
-          <div id="bottom-base"></div> -->
           <div id="head" style="display: none">
               <div id="rope"></div>
           </div>
@@ -33,25 +32,16 @@
         <div id="blood"></div>
       </div>
       
+      <!-- Random word to be guessed letters.-->
       <div id="word-container" style="display: none"></div>
+
       <!-- Contains div letters from A - Z-->
       <div id="alphabet-container"></div>
-
-      <!-- <div id="response-container">
-        <form>
-          <input
-            type="text"
-            id="letterInput"
-            name="letterInput"
-            placeholder="Enter letter"
-            maxlength="1"
-            required
-          />
-          <input class="buttonStyle" type="submit" value="Enter" />
-        </form>
-      </div> -->
+      
+      <button class="buttonStyle">Reset</button>
     </div>
 
+    <!-- Content when the game has not started.-->
     <div id="start-game-container">
       <h1 id="startTitle">HangMan</h1>
       <button id="startButton" class="buttonStyle" onclick="startGame()">

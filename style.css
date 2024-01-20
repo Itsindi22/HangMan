@@ -32,7 +32,6 @@ header {
 #hangman-container {
     display: flex;
     justify-content: center;
-    /* margin-top: 40px; */
 }
 #hangman {
     display: flex;
@@ -105,29 +104,7 @@ header {
     border-radius: 50%;
     box-shadow: 0 4px 8px 0 rgba(255, 0, 0, 0.764), 0 6px 20px 0 rgba(255, 0, 0, 0.75);
 }
-/* #top-base {
-    width:200px;
-    height: 10px;
-    background-color: black;
-}
-#top-vertical-line {
-    width: 10px;
-    height: 50px;
-    margin-left: 189px;
-    background-color: red;
-}
-#vertical-line {
-    width: 10px;
-    height: 300px;
-    margin-top: -60px;
-    background-color: green;
-}
-#bottom-base {
-    width:200px;
-    height: 10px;
-    margin-left: -95px;
-    background-color: orange;
-} */
+
 #word-container {
     display: flex;
     justify-content: center;
