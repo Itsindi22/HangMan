@@ -16,19 +16,25 @@ var leftLeg = document.getElementById('left-leg')
 var rightLeg = document.getElementById('right-leg')
 var hangManPieces = [head, body, leftArm, rightArm, leftLeg, rightLeg]
 
-alphabet.split('').forEach(function(letter) {
+document.getElementById("resetButton").onclick = function() {
+    location.href= "game.html"
+    // getRandomWord();
+    // drawAlphabets();
+};
 
-    // Creates a new letter div element
-    var letterButton = document.createElement('button');
-    letterButton.className = 'alphabetLetter';
-    letterButton.id = "alphabetBtn";
-    letterButton.textContent = letter;
-
-    // Appends the button to the container
-    alphabetContainer.appendChild(letterButton);
-    alphabetList.push(letterButton)
-})
-
+function drawAlphabets() {
+    alphabet.split('').forEach(function(letter) {
+        // Creates a new letter div element
+        var letterButton = document.createElement('button');
+        letterButton.className = 'alphabetLetter';
+        letterButton.id = "alphabetBtn";
+        letterButton.textContent = letter;
+    
+        // Appends the button to the container
+        alphabetContainer.appendChild(letterButton);
+        alphabetList.push(letterButton)
+    });
+}
 
 async function getRandomWord() {
     const url = "https://random-word-api.herokuapp.com/word";
@@ -65,27 +71,8 @@ async function getRandomWord() {
     }
 }
 
-getRandomWord()
-
-async function startGame() {
-    const startGameContainer = document.getElementById('start-game-container');
-    const gameDisplay = document.getElementById('gameDisplay');
- 
-    startGameContainer.style.display = "none";
-    gameDisplay.style.display = "inline";
- }
-
- 
- function resetHeight(element, reduction){
-    // reset the body height to that of the inner browser
-    element.style.height = window.innerHeight-reduction + "px";
-}
-// reset the height whenever the window's resized
-window.addEventListener("resize", () => resetHeight(startGameContainer, 10));
-
-// called to initially set the height.
-resetHeight(startGameContainer, 10);
-
+getRandomWord();
+drawAlphabets();
 alphabetList.forEach(function(letterButton) {
     letterButton.addEventListener("click", function() {
         if (!gameEndBoolean) {
