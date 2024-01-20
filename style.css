@@ -25,11 +25,19 @@ body {
 }
 
 #startTitle {
-    margin-bottom: 20px;
+    margin-bottom:10px;
     font-size: 70px;
     color: var(--title);
 }
+
+#start-description {
+    text-align: center;
+    width:550px;
+    color: var(--highlight);
+}
+
 #startButton {
+    margin-top: 20px;
     width:230px;
     height: 80px;
     padding: 10px;
@@ -54,4 +62,27 @@ body {
 #startButton:active {
 	background-color: #9a9c9c;
 	color: white;
+}
+
+@media only screen and (max-width: 550px){
+    #start-description {
+        width: 360px;
+    }
+}
+
+@media only screen and (max-width: 360px){
+    #startTitle {
+        font-size: 50px
+    }
+
+    #start-description {
+        width: 240px;
+        font-size: 20px;
+    }
+
+    #startButton {
+        width: 180px;
+        height: 50px;
+        font-size: 20px;
+    }
 }
