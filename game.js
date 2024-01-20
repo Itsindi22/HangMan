@@ -1,4 +1,13 @@
 var alphabetContainer = document.querySelector("#alphabet-container");
+var head = document.getElementById("head");
+var body = document.getElementById("body");
+var leftArm = document.getElementById("left-arm");
+var rightArm = document.getElementById("right-arm");
+var leftLeg = document.getElementById("left-leg");
+var rightLeg = document.getElementById("right-leg");
+var centerDiv = document.getElementById("center-div");
+var endMessage = document.getElementById("end-message");
+var resetButton = document.getElementById("resetButton");
 var wordContainer = document.getElementById("word-container");
 var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var alphabetList = [];
@@ -7,26 +16,8 @@ var randomWordDict = {};
 let randomWordLength = 0;
 let gameEndBoolean = false;
 let playerTries = 6;
-var head = document.getElementById("head");
-var body = document.getElementById("body");
-var leftArm = document.getElementById("left-arm");
-var rightArm = document.getElementById("right-arm");
-var leftLeg = document.getElementById("left-leg");
-var rightLeg = document.getElementById("right-leg");
 var hangManPieces = [head, body, leftArm, rightArm, leftLeg, rightLeg];
-var centerDiv = document.getElementById("center-div");
-var endMessage = document.getElementById("end-message");
-var resetButton = document.getElementById("resetButton");
 
-resetButton.onclick = function () {
-    resetGame()
-};
-
-function resetGame() {
-    location.href = "game.html";
-    // getRandomWord();
-    // drawAlphabets();
-}
 function drawAlphabets() {
     alphabet.split("").forEach(function (letter) {
         // Creates a new letter div element
@@ -78,6 +69,11 @@ async function getRandomWord() {
 
 getRandomWord();
 drawAlphabets();
+
+/* Loops through each letter button and checks if one has been clicked, if the game has not
+   ended, and the button has not been clicked before, check if the letter is in the random word.
+   If the letter is in the random word, turn the letter button green, and show the letter in the
+   random word div's, otherwise turn the letter button red */
 alphabetList.forEach(function (letterButton) {
     letterButton.addEventListener("click", function () {
         if (!gameEndBoolean) {
@@ -106,7 +102,6 @@ alphabetList.forEach(function (letterButton) {
                 if (letterButton.style.backgroundColor != "var(--title)") {
                     playerTries -= 1;
                     endMessage.innerHTML = "Attempts Left: " + playerTries;
-                    removeCenterId();
                     var piece = hangManPieces.shift();
                     piece.style.display = "block";
                 }
@@ -157,12 +152,6 @@ function gameEnd(state) {
     });
 }
 
-function removeCenterId() {
-    centerDiv.style.display = "block";
-    centerDiv.style.height = "auto";
-    centerDiv.style.border = "none";
-}
-
 window.addEventListener("keydown", function (event) {
     letterKeyPress(event.key);
 });
@@ -173,8 +162,7 @@ function letterKeyPress(letterKey) {
             var letter = letterButton.textContent.toLowerCase();
             if (letter === letterKey) {
                 var letterInWord = false;
-                console.log("Letter: " + letter);
-
+                
                 Object.keys(randomWordDict).forEach((key) => {
                     var data = randomWordDict[key];
                     var letterDiv = data[0];
@@ -196,7 +184,6 @@ function letterKeyPress(letterKey) {
                     if (letterButton.style.backgroundColor != "var(--title)") {
                         playerTries -= 1;
                         endMessage.innerHTML = "Attempts Left: " + playerTries;
-                        removeCenterId();
                         var piece = hangManPieces.shift();
                         piece.style.display = "block";
                     }
@@ -214,4 +201,12 @@ function letterKeyPress(letterKey) {
             }
         }
     });
+}
+
+resetButton.onclick = function () {
+    resetGame()
+};
+
+function resetGame() {
+    location.href = "game.html";
 }
