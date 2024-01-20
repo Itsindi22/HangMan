@@ -125,9 +125,11 @@ function gameEnd(state) {
 
     if (state === "win") {
         backgroundColor = "green";
+        alert(`Congratulations!! You won! It only took ${6 - playerTries} attempts!`)
     } else {
         backgroundColor = "var(--title)"
         bloodDisplay.style.display = 'flex'
+        alert("Game Over: You Lost. Try again?")
     }
 
     Object.keys(randomWordDict).forEach((key) => {
@@ -138,11 +140,5 @@ function gameEnd(state) {
         letterDiv.style.backgroundColor = backgroundColor;
         letterDiv.textContent = wordLetter;
     })
-
-    if (state === "win") {
-        alert(`Congratulations!! You won! It only took ${6 - playerTries} attempts!`)
-    } else {
-        alert("Game Over: You Lost. Try again?")
-    }
 }
 
