@@ -1,7 +1,7 @@
-# 📖 HangMan 📖
+# ☠️ HangMan ☠️
 
 ## 💡 About 💡
-- Traditional HangMan website where the player can click on letters on screen, or use their keyboard
+- Traditional HangMan website where the player can click on letters on screen or use their keyboard
 letters. 
 
 ## ℹ️ More Information ℹ️
@@ -13,7 +13,7 @@ letters.
 ## 🔗 Visit 🔗
 - No link.
 
-## 💻 CONTRIBUTORS 💻
+## 🙌 CONTRIBUTORS 🙌
 
 1. Inderpreet Singh: [https://github.com/Itsindi22](https://github.com/Itsindi22)
 2. MochaWaffle: [https://github.com/MochaWaffle](https://github.com/MochaWaffle)
