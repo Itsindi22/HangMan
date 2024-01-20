@@ -64,6 +64,18 @@ body {
 	color: white;
 }
 
+#parentFooterText {
+	display: flex;
+	justify-content: center;
+}
+
+#footerText {
+    text-align: center;
+	position: fixed;
+	bottom: 10px;
+    color: var(--text);
+}
+
 @media only screen and (max-width: 550px){
     #start-description {
         width: 360px;
