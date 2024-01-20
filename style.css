@@ -161,6 +161,9 @@ header {
     width: 100px;
     font-size: 25px;
 }
+#loading-text {
+    color: var(--highlight);
+}
 .buttonStyle {
     border: none;
 	padding: 10px;
