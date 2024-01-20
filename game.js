@@ -1,6 +1,5 @@
 var alphabetContainer = document.querySelector('#alphabet-container');
 var wordContainer = document.getElementById('word-container');
-var startGameContainer = document.getElementById('start-game-container');
 var alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var alphabetList = [];
 let randomWord = "";
@@ -15,6 +14,7 @@ var rightArm = document.getElementById('right-arm')
 var leftLeg = document.getElementById('left-leg')
 var rightLeg = document.getElementById('right-leg')
 var hangManPieces = [head, body, leftArm, rightArm, leftLeg, rightLeg]
+var centerDiv = document.getElementById("center-div");
 
 document.getElementById("resetButton").onclick = function() {
     location.href= "game.html"
@@ -100,6 +100,7 @@ alphabetList.forEach(function(letterButton) {
             } else {
                 if (letterButton.style.backgroundColor != "var(--title)") {
                     playerTries -= 1;
+                    removeCenterId();
                     var piece = hangManPieces.shift();
                     piece.style.display = 'block';
                 }
@@ -142,3 +143,18 @@ function gameEnd(state) {
     })
 }
 
+function resetHeight(element, reduction) {
+    if (playerTries == 6) {
+        element.style.height = window.innerHeight - reduction + "px";
+    }
+}
+
+function removeCenterId() {
+    centerDiv.style.display = "block"
+    centerDiv.style.height = "auto";
+    centerDiv.style.border = "none";
+}
+
+resetHeight(centerDiv, 120);
+
+window.addEventListener("resize", () => resetHeight(centerDiv, 120));
