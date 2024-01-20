@@ -157,21 +157,11 @@ function gameEnd(state) {
     });
 }
 
-function resetHeight(element, reduction) {
-    if (playerTries == 6) {
-        element.style.height = window.innerHeight - reduction + "px";
-    }
-}
-
 function removeCenterId() {
     centerDiv.style.display = "block";
     centerDiv.style.height = "auto";
     centerDiv.style.border = "none";
 }
-
-resetHeight(centerDiv, 120);
-
-window.addEventListener("resize", () => resetHeight(centerDiv, 120));
 
 window.addEventListener("keydown", function (event) {
     letterKeyPress(event.key);
