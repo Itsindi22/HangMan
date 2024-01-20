@@ -138,5 +138,11 @@ function gameEnd(state) {
         letterDiv.style.backgroundColor = backgroundColor;
         letterDiv.textContent = wordLetter;
     })
+
+    if (state === "win") {
+        alert(`Congratulations!! You won! It only took ${6 - playerTries} attempts!`)
+    } else {
+        alert("Game Over: You Lost. Try again?")
+    }
 }
 
