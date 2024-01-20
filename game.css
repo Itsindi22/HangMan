@@ -157,6 +157,11 @@ header {
     font-size: 25px;
 }
 
+#end-message {
+    margin-top: 40px;
+    text-align: center;
+    color: var(--highlight)
+}
 #loading-text {
     color: var(--highlight);
 }

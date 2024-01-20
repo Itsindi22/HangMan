@@ -15,6 +15,7 @@ var leftLeg = document.getElementById('left-leg')
 var rightLeg = document.getElementById('right-leg')
 var hangManPieces = [head, body, leftArm, rightArm, leftLeg, rightLeg]
 var centerDiv = document.getElementById("center-div");
+var endMessage = document.getElementById("end-message");
 
 document.getElementById("resetButton").onclick = function() {
     location.href= "game.html"
@@ -46,7 +47,7 @@ async function getRandomWord() {
         }
         const data = await response.json();
         const word = data[0];
-        console.log("word: ", word)
+
         randomWord = word;
         randomWordLength = randomWord.length;
 
@@ -100,6 +101,7 @@ alphabetList.forEach(function(letterButton) {
             } else {
                 if (letterButton.style.backgroundColor != "var(--title)") {
                     playerTries -= 1;
+                    endMessage.innerHTML = "Attempts Left: " + playerTries; 
                     removeCenterId();
                     var piece = hangManPieces.shift();
                     piece.style.display = 'block';
@@ -126,11 +128,19 @@ function gameEnd(state) {
 
     if (state === "win") {
         backgroundColor = "green";
-        alert(`Congratulations!! You won! It only took ${6 - playerTries} attempts!`)
+        var attemptsLeft = ""
+
+        if (playerTries > 1) {
+            attemptsLeft = playerTries + " attempts"
+        } else {
+            attemptsLeft = playerTries + " attempt";
+        }
+
+        endMessage.innerHTML = `Congratulations!! You won! You had ${attemptsLeft} left!`;
     } else {
         backgroundColor = "var(--title)"
         bloodDisplay.style.display = 'flex'
-        alert("Game Over: You Lost. Try again?")
+        endMessage.innerHTML = "Game Over: You Lost. Try again?";
     }
 
     Object.keys(randomWordDict).forEach((key) => {
